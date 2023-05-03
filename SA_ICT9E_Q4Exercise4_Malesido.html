@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>Exercise #4 | Time Converter</title>
+	<style type="text/css">
+		body, .div1{
+			background-color: #610424;
+		}
+		p, input, label{
+			font-family: 'DynaPuff', cursive;
+			font-size: 20px;
+		}
+		.btn{
+			font-family: 'DynaPuff', cursive;
+			font-size: 20px;
+		}
+		.div1{
+			text-decoration: underline overline;
+			color: #FFFF;
+			font-family: 'DynaPuff', cursive;
+			margin-right: 35%;
+			margin-left: 35%;
+		}
+		.div2{
+			background-color: #D7B5C1;
+			margin-right: 10%;
+			margin-left: 10%;
+		}
+		img{
+			height: 15%;
+			width: 15%;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<br><br>
+		<div class="div1">
+			<h1>Time Conversion</h1>
+		</div>
+		<br><br>
+		<div class="div2">
+			<br>
+			<img src="https://static.thenounproject.com/png/22896-200.png">
+			<br><br>
+			<p>Input:</p>
+			<label>(In Seconds)</label>
+			<input type="number" name="second" id="second"><br><br>
+			<p>Minute/s:</p>
+			<input type="number" name="minute" id="minute" disabled><br><br>
+			<p>Hour/s:</p>
+			<input type="number" name="hour" id="hour" disabled><br><br>
+			<button type="submit" class="btn btn-success" onclick="Compute()">Convert</button>
+			<br><br>
+		</div>
+		<br><br>
+		<script type="text/javascript">
+			function Compute(){
+			var second = document.getElementById("second").value;
+			var minute = document.getElementById("minute").value;
+			var hour = document.getElementById("hour").value;
+			var quotient1 = Number (second) / 60;
+			var quotient2 = Number (second) / 3600;
+			window.alert("The minute/s are: " + quotient1 + "\n" + "The hour/s are: " + quotient2 + "\n");
+		}
+		</script>
+	</center>
+</body>
+</html>
